@@ -15,8 +15,7 @@ public class Data {
     private String tanggalLahir;
     private String hobby;
     private String jurusan;
-    
-    
+   
     
     
    public Data(String namaLengkap, String jenisKelamin, String jurusan, String tanggalLahir, String hobby) {
