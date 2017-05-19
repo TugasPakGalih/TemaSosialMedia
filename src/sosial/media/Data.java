@@ -17,6 +17,7 @@ public class Data {
     private String jurusan;
     
     
+    
    public Data(String namaLengkap, String jenisKelamin, String jurusan, String tanggalLahir, String hobby) {
         this.namaLengkap = namaLengkap;
         this.tanggalLahir = tanggalLahir;
