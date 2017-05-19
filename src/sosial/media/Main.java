@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-                
+        Scanner scan = new Scanner(System.in);
         HashMap<String, ArrayList<Data>> daftar = new HashMap<String, ArrayList<Data>>();
         ArrayList<Data> people = new ArrayList<Data>();
         System.out.println("Daftar Akun Baru");
@@ -48,6 +48,39 @@ public class Main {
                 System.out.println(i+" "+b.getNamaLengkap());
                 i++;
             }
+            i=1;
+            System.out.println("");
+            System.out.print("Masukkan Indeks User : ");
+            pilihIndeks = scan.nextInt();
+            pilihOrang.add(people.get(pilihIndeks-=1));
+            scan.nextLine();
+
+            System.out.print("Masukan indeks user lagi? (y/n) : ");
+            pilih = scan.nextLine().charAt(0);
+
+        }
+        System.out.println("Masukkan Nama Circle ");
+        String teman = scan.nextLine();
+
+        daftar.put(teman, pilihOrang);
         
+        ArrayList<Data> user = daftar.get(teman);
+        Data bob1 = user.get(0);
+        Data bob2 = user.get(1);
+
+        System.out.println("Nama Circle : "+teman);
+        for (Data a:user
+             ) {
+            System.out.println("Data ke "+i);
+            System.out.println("Nama : "+a.getNamaLengkap());
+            System.out.println("Jenis kelamin : "+a.getJenisKelamin());
+            System.out.println("Jurusan : "+a.getJurusan());
+            System.out.println("Tanggal lahir : "+a.getTanggalLahir());
+            System.out.println("Hobby : "+a.getHobby());
+            System.out.println("");
+            i++;
+        }
+
+    }
+
 }
-    }}
